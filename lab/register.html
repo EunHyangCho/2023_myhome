@@ -3,69 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>회원가입</title>
-    <style>
-        p {
-            color: red;
-            font-size: 10pt;
-        }
-        div {font-weight: bold;
-            background-color: lightblue;
-            width: 800px;
-            padding-left: 10px;
-        }
-        label {
-            margin-left: 8px;
-            text-align: right;
-            display: inline-block;
-            width: 130px;
-            padding-right: 8px;
-        }
-        span.required{
-            color: red;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-<h2>취업 정보 계정 만들기</h2>
+<h2 class="text-center mt-4 fw-bold">취업 정보 계정 만들기</h2>
+<hr class="m-3">
 
-<p>* 필수 입력 항목</p>
+<p class="m-3"><span class="text-danger">*</span> 필수 입력 항목</p>
 <form name="register" method="post">
-    <br>
-    <div>기본 정보</div>
-    <br>
-    <label for="nm">이 름<span class="required">*</span></label><input id="nm" type="text" size="8"><br>
-    <label for="eml">이메일<span class="required">*</span></label><input id="eml" type="email" size="15" placeholder="id@domain_name"><br>
-    <label for="psw">암호<span class="required">*</span></label><input id="psw" type="password" size="12"><br>
-    <label for="pch">암호 확인<span class="required">*</span></label><input id="pch" type="password" size="12"><br>
-    <label for="mob">모바일 폰<span class="required">*</span></label><input id="mob" type="tel" size="13" placeholder="010-0000-0000"><br>
-    <label for="home">개인 홈페이지</label><input id="home" type="url" size="30" placeholder="http://"><br>
-    <label for="ad">주소<span class="required">*</span></label><input id="ad" type="text" size="30"><br>
-    <br>
-    <div>학 력</div>
-    <br>
-    <label for="scl">학교 명<span class="required">*</span></label><input id="scl" type="text" size="12"><br>
-    <label for="mg">전 공<span class="required">*</span></label><input id="mg" type="text" size="12"><br>
-    <label for="grd">졸업 여부<span class="required">*</span></label>
-        <select id="grd">
-            <option value="1" selected>--선택--</option>
-            <option value="2">졸업예정</option>
-            <option value="3">졸업</option>
-        </select><br>
-    <label for="gda">졸업 (예정)일</label><input id="gda" type="date"><br>
-    <br>
-    <div>업무 경력</div>
-    <br>
-    <label for="wo"> 근무업체명</label><input id="wo" type="text" size="20"><br>
-    <label for="po">직 위</label><input id="po" type="text" size="10"><br>
-    <label for="comments">담당 업무</label><textarea id="comments" cols="80" rows="10" placeholder="이전 업체에서 담당한 업무를 기술하시오."></textarea><br>
-    <label for="ye">근무년수</label><input id="ye" type="number" min="0" max="10" step="0.5">년<br>
-    <br>
-    <div>자기소개서</div>
-    <br>
-    <label for="fi">첨부 파일</label><input id="fi" type="file"><br>
-    <input style="margin-left: 200px" type="submit" value="제출">
-    <input type="reset" value="재작성">
+    <div class="container-fluid">
+        <div class="text-bg-primary mt-4 p-2">기본 정보</div>
+        <br>
+        <label for="nm">이 름<span class="text-danger">*</span></label><input id="nm" type="text" size="8"><br>
+        <label for="eml">이메일<span class="text-danger">*</span></label><input id="eml" type="email" size="15" placeholder="id@domain_name"><br>
+        <label for="psw">암호<span class="text-danger">*</span></label><input id="psw" type="password" size="12"><br>
+        <label for="pch">암호 확인<span class="text-danger">*</span></label><input id="pch" type="password" size="12"><br>
+        <label for="mob">모바일 폰<span class="text-danger">*</span></label><input id="mob" type="tel" size="13" placeholder="010-0000-0000"><br>
+        <label for="home">개인 홈페이지</label><input id="home" type="url" size="30" placeholder="http://"><br>
+        <label for="ad">주소<span class="text-danger">*</span>></label><input id="ad" type="text" size="30"><br>
+        <br>
+        <div class="text-bg-success mt-4 p-2">학 력</div>
+        <br>
+        <label for="scl">학교 명<<span class="text-danger">*</span></label><input id="scl" type="text" size="12"><br>
+        <label for="mg">전 공<span class="text-danger">*</span></label><input id="mg" type="text" size="12"><br>
+        <label for="grd">졸업 여부<span class="text-danger">*</span></label>
+            <select id="grd">
+                <option value="1" selected>--선택--</option>
+                <option value="2">졸업예정</option>
+                <option value="3">졸업</option>
+            </select><br>
+        <label for="gda">졸업 (예정)일</label><input id="gda" type="date"><br>
+        <br>
+        <div class="text-bg-secondary mt-4 p-2">업무 경력</div>
+        <br>
+        <label>최종 직위</label><br>
+        <br>
+        <label><input type="radio" name="position" value="1">사원급</label>
+        <label><input type="radio" name="position" value="2">대리~과장</label>
+        <label><input type="radio" name="position" value="3">차장급 이상</label>
+        <label><input type="radio" name="position" value="4">임원급</label><br>
+        <br>
+        <label for="comments">주요 담당 업무</label><textarea id="comments" cols="80" rows="10" placeholder="담당했던 업무를 기술하시오."></textarea><br>
+        <p class="text-center"><button type="button" class="btn btn-outline-primary">제출</button>
+            <button type="reset" class="btn btn-outline-primary">재작성</button></p>
+</div>
 </form>
 </body>
 </html>
